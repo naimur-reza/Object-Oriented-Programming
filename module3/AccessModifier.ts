@@ -4,16 +4,19 @@
   class BankAccount {
     public id: number;
     public name: string;
-    private balance: number;
+    private _balance: number;
 
-    constructor(id: number, name: string, balance: number) {
-      this.balance = balance;
+    constructor(id: number, name: string, _balance: number) {
+      this._balance = _balance;
       this.name = name;
       this.id = id;
     }
 
     addDeposit(balance: number) {
-      return this.balance + balance;
+      return this._balance + balance;
+    }
+    getBalance() {
+      return this._balance;
     }
   }
 
