@@ -2,12 +2,19 @@
   //
 
   class BankAccount {
-    public id: number;
+    public readonly id: number;
     public name: string;
-    private _balance: number;
+    protected lastDeposit: number;
+    private _balance: number; // private property doesn't share with any other classes while protected property share with child classes.
 
-    constructor(id: number, name: string, _balance: number) {
+    constructor(
+      id: number,
+      name: string,
+      _balance: number,
+      lastDeposit: number
+    ) {
       this._balance = _balance;
+      this.lastDeposit = lastDeposit;
       this.name = name;
       this.id = id;
     }
@@ -20,7 +27,7 @@
     }
   }
 
-  const johnAccount = new BankAccount(123, "John", 29);
+  const johnAccount = new BankAccount(123, "John", 29, 20000);
   console.log(johnAccount.addDeposit(44));
   //
 }
