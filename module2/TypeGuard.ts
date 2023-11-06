@@ -26,8 +26,11 @@
   const getUser = (values: Guest | Admin) => {
     if ("role" in values)
       // now we can do anything with admin property. That is called type guard
-      return values.role;
+      return console.log("The king name is" + " " + values.name);
+    else
+      return console.log("You're a normal user noobie! You can't get the name");
   };
 
+  getUser({ name: "Shaikh", email: " SHai@xyz", role: "admin" });
   //
 }
