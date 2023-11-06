@@ -62,7 +62,10 @@
     if (developer instanceof SeniorDeveloper)
       // this is called instance guard
       return developer.getSeniorCodeTime();
+
+    if (developer instanceof JuniorDeveloper)
+      return developer.getJuniorGetTime();
   };
 
-  getTime(seniorDeveloper);
+  getTime(juniorDeveloper);
 }
