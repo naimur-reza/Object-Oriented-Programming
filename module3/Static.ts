@@ -5,19 +5,19 @@
       Number.value = 5;
     }
 
-    increment() {
+    static increment() {
       return Number.value + 1;
     }
 
-    decrement() {
+    static decrement() {
       return Number.value - 1;
     }
   }
 
-  const initialNumber = new Number();
+  //   const initialNumber = new Number();
 
-  const num1 = initialNumber.increment();
-  const num2 = initialNumber.decrement();
+  //   const num1 = initialNumber.increment();
+  //   const num2 = initialNumber.decrement();
 
-  console.log({ num1, num2 });
+  console.log(Number.increment(), Number.decrement());
 }
