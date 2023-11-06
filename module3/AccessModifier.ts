@@ -12,10 +12,10 @@
       this.id = id;
     }
 
-    addDeposit(balance: number) {
+    public addDeposit(balance: number) {
       return this._balance + balance;
     }
-    getBalance() {
+    public getBalance() {
       return this._balance;
     }
   }
