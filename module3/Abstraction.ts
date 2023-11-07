@@ -1,4 +1,6 @@
 {
+  //  abstraction is a thing where this create the way of make method or anything but this class cant make instance
+
   interface Vehicle {
     startEngine(): void;
     stopEngine(): void;
@@ -24,5 +26,6 @@
   }
 
   const newCar = new Toyota();
+  newCar.startEngine();
   newCar.move();
 }
