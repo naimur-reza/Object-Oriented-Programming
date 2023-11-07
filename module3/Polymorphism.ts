@@ -22,4 +22,6 @@
 
   getSleepingHours(person);
   getSleepingHours(developer);
+
+  //  second example
 }
